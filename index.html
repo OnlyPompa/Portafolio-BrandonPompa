@@ -67,7 +67,8 @@
             <lord-icon
               id="inicioIcon"
               src="https://cdn.lordicon.com/cnpvyndp.json"
-              trigger="hover"
+              trigger="morph"
+              state="morph-home-2"
               colors="primary:#ffffff"
               style="width:25px;height:25px; margin-right: 5px; display: none;">
             </lord-icon>
@@ -80,19 +81,14 @@
           var inicioLink = document.getElementById('inicioLink');
           var inicioIcon = document.getElementById('inicioIcon');
         
-          // Agrega el evento de mouseover para mostrar el icono y reproducir la animación
+          // Agrega el evento de mouseover para reproducir la animación
           inicioLink.addEventListener('mouseover', function() {
-            inicioIcon.style.display = 'inline-block';
             inicioIcon.start();
           });
-        
-          // Agrega el evento de mouseout para ocultar el icono cuando el cursor no está sobre el texto
-          inicioLink.addEventListener('mouseout', function() {
-            inicioIcon.style.display = 'none';
-          });
-        </script> 
+        </script>
+
         <li>
-          <a href="#about">
+          <a href="#About">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
               src="https://cdn.lordicon.com/kddybgok.json"
@@ -144,7 +140,7 @@
     </section><!-- /Seccion de Inicio-->
 
     <!-- About Section -->
-    <section id="#about" class="about section">
+    <section id="about" class="about section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
