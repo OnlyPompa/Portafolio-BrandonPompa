@@ -72,7 +72,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li>
-          <a href="#Inicio">
+          <a href="#Inicio">Inicio
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
               src="https://cdn.lordicon.com/cnpvyndp.json"
@@ -81,11 +81,10 @@
               colors="primary:#ffffff"
               style="width:25;height:25px; margin-right: 5px;">
             </lord-icon>
-            Inicio
           </a>
         </li>
         <li>
-          <a href="#about">
+          <a href="#about">About
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
               src="https://cdn.lordicon.com/kddybgok.json"
@@ -93,7 +92,6 @@
               colors="primary:#ffffff"
               style="width:25;height:25px; margin-right: 5px;">
             </lord-icon>
-            Acerca de mi
           </a>
         </li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
@@ -859,27 +857,6 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Animacion de los Logos -->
-  <script>
-    const links = [
-        { linkId: 'inicio-link', iconId: 'inicio-icon', triggerIn: 'loop', triggerOut: 'morph' },
-        { linkId: 'about-link', iconId: 'about-icon', triggerIn: 'loop', triggerOut: 'morph' }
-    ];
-
-    links.forEach(({ linkId, iconId, triggerIn, triggerOut }) => {
-        const linkElement = document.getElementById(linkId);
-        const iconElement = document.getElementById(iconId);
-
-        linkElement.addEventListener('mouseover', () => {
-            iconElement.setAttribute('trigger', triggerIn);
-        });
-
-        linkElement.addEventListener('mouseout', () => {
-            iconElement.setAttribute('trigger', triggerOut);
-        });
-    });
-</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
