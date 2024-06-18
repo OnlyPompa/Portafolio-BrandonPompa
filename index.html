@@ -13,6 +13,14 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Lordicons-->>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <style>
+      lord-icon {
+          width: 25px;
+          height: 25px;
+          margin-right: 5px;
+      }
+  </style>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -77,7 +85,7 @@
           </a>
         </li>
         <li>
-          <a href="#Acercademi">
+          <a href="#about">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
               src="https://cdn.lordicon.com/kddybgok.json"
@@ -129,7 +137,7 @@
     </section><!-- /Seccion de Inicio-->
 
     <!-- About Section -->
-    <section id="#Acercademi" class="about section">
+    <section id="#about" class="about section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -851,6 +859,27 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Animacion de los Logos -->
+  <script>
+    const links = [
+        { linkId: 'inicio-link', iconId: 'inicio-icon', triggerIn: 'loop', triggerOut: 'morph' },
+        { linkId: 'about-link', iconId: 'about-icon', triggerIn: 'loop', triggerOut: 'morph' }
+    ];
+
+    links.forEach(({ linkId, iconId, triggerIn, triggerOut }) => {
+        const linkElement = document.getElementById(linkId);
+        const iconElement = document.getElementById(iconId);
+
+        linkElement.addEventListener('mouseover', () => {
+            iconElement.setAttribute('trigger', triggerIn);
+        });
+
+        linkElement.addEventListener('mouseout', () => {
+            iconElement.setAttribute('trigger', triggerOut);
+        });
+    });
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
