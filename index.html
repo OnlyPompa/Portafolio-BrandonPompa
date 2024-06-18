@@ -62,27 +62,29 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li>
-          <a href="#Inicio" id="inicioLink">
-            <script src="https://cdn.lordicon.com/lordicon.js"></script>
-            <lord-icon
-              id="inicioIcon"
-              src="https://cdn.lordicon.com/cnpvyndp.json"
-              trigger="morph"
-              state="morph-home-2"
-              colors="primary:#ffffff"
-              style="width:25px;height:25px; margin-right: 5px;">
-            </lord-icon>
-            Inicio
-          </a>
+          <div id="inicioContainer">
+            <a href="#Inicio" id="inicioLink">
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                id="inicioIcon"
+                src="https://cdn.lordicon.com/cnpvyndp.json"
+                trigger="morph"
+                state="morph-home-2"
+                colors="primary:#ffffff"
+                style="width:25px;height:25px; margin-right: 5px;">
+              </lord-icon>
+              Inicio
+            </a>
+          </div>
         </li>
-                
+        
         <script>
-          // Selecciona el enlace y el icono
-          var inicioLink = document.getElementById('inicioLink');
+          // Selecciona el contenedor y el icono
+          var inicioContainer = document.getElementById('inicioContainer');
           var inicioIcon = document.getElementById('inicioIcon');
-                
+        
           // Agrega el evento de mouseover para reproducir la animación
-          inicioLink.addEventListener('mouseover', function() {
+          inicioContainer.addEventListener('mouseover', function() {
             inicioIcon.start();
           });
         </script>
