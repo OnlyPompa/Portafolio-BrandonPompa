@@ -12,16 +12,6 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Lordicons-->>
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <style>
-      lord-icon {
-          width: 25px;
-          height: 25px;
-          margin-right: 5px;
-      }
-  </style>
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -72,19 +62,37 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li>
-          <a href="#Inicio">Inicio
+          <a href="#Inicio" id="inicioLink">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
+              id="inicioIcon"
               src="https://cdn.lordicon.com/cnpvyndp.json"
-              trigger="morph"
-              state="morph-home-2"
+              trigger="hover"
               colors="primary:#ffffff"
-              style="width:25;height:25px; margin-right: 5px;">
+              style="width:25px;height:25px; margin-right: 5px; display: none;">
             </lord-icon>
+            Inicio
           </a>
         </li>
+        
+        <script>
+          // Selecciona el enlace y el icono
+          var inicioLink = document.getElementById('inicioLink');
+          var inicioIcon = document.getElementById('inicioIcon');
+        
+          // Agrega el evento de mouseover para mostrar el icono y reproducir la animación
+          inicioLink.addEventListener('mouseover', function() {
+            inicioIcon.style.display = 'inline-block';
+            inicioIcon.start();
+          });
+        
+          // Agrega el evento de mouseout para ocultar el icono cuando el cursor no está sobre el texto
+          inicioLink.addEventListener('mouseout', function() {
+            inicioIcon.style.display = 'none';
+          });
+        </script> 
         <li>
-          <a href="#about">About
+          <a href="#about">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
               src="https://cdn.lordicon.com/kddybgok.json"
@@ -92,10 +100,11 @@
               colors="primary:#ffffff"
               style="width:25;height:25px; margin-right: 5px;">
             </lord-icon>
+            Acerca de mi
           </a>
         </li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Porfolio</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portafolio</a></li>
         <li><a href="#Servicios"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
         <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
