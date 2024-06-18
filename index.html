@@ -64,12 +64,11 @@
         <li>
           <div id="inicioContainer">
             <a href="#Inicio" id="inicioLink">
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
               <lord-icon
                 id="inicioIcon"
                 src="https://cdn.lordicon.com/cnpvyndp.json"
-                trigger="morph"
-                state="morph-home-2"
+                trigger="loop"
                 colors="primary:#ffffff"
                 style="width:25px;height:25px; margin-right: 5px;">
               </lord-icon>
@@ -83,9 +82,17 @@
           var inicioContainer = document.getElementById('inicioContainer');
           var inicioIcon = document.getElementById('inicioIcon');
         
+          // Carga el icono
+          lordIconLoader.load(inicioIcon);
+        
           // Agrega el evento de mouseover para reproducir la animación
           inicioContainer.addEventListener('mouseover', function() {
             inicioIcon.start();
+          });
+        
+          // Agrega el evento de mouseout para detener la animación
+          inicioContainer.addEventListener('mouseout', function() {
+            inicioIcon.stop();
           });
         </script>
         
