@@ -68,7 +68,7 @@
               <lord-icon
                 id="inicioIcon"
                 src="https://cdn.lordicon.com/cnpvyndp.json"
-                trigger="loop"
+                trigger="manual"
                 colors="primary:#ffffff"
                 style="width:25px;height:25px; margin-right: 5px;">
               </lord-icon>
@@ -85,14 +85,9 @@
           // Carga el icono
           lordIconLoader.load(inicioIcon);
         
-          // Agrega el evento de mouseover para reproducir la animación
-          inicioContainer.addEventListener('mouseover', function() {
+          // Agrega el evento de click para reproducir la animación
+          inicioContainer.addEventListener('click', function() {
             inicioIcon.start();
-          });
-        
-          // Agrega el evento de mouseout para detener la animación
-          inicioContainer.addEventListener('mouseout', function() {
-            inicioIcon.stop();
           });
         </script>
         
