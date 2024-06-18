@@ -301,6 +301,14 @@ h6 {
   background-color: rgba(33, 37, 41, 0.03);
 }
 
+.navmenu ul li a:hover {
+  color: #ffffff; /* Cambia esto al color que desees */
+}
+
+.navmenu ul li a:hover lord-icon {
+  state: "morph-home-2";
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
